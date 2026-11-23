@@ -1,0 +1,29 @@
+{%load static%}
+<html>
+<head>
+    <title>Churn Rate</title>
+    <link href="{% static 'myapp/css.css' %}" rel='stylesheet'>
+
+</head>
+<body>
+    <h1>Churn Rate Calculater </h1>
+
+    <h2>Hari Haran R(26018618)</h2><br>
+
+ <form method="POST">
+        {% csrf_token %} 
+        <label><b>Initial Customer:</b> </label>
+        <input type="number" name="IC" value="{{initialcustomer}}">     
+        <br><br>
+        <label><b>Present Customer:</b></label> 
+        <input type="number" name="PC" value="{{presentcustomer}}">
+        <br><br>
+        <input type="submit" value="Calculate" style="position:absolute ; top: 210; right:1620;">
+        <br><br>
+
+        <label><b>Churn Rate:</b></label >
+        <input type="text" value="{{Churn_Rate}}">
+ </form>
+
+</body>
+</html>
